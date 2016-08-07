@@ -1,0 +1,1 @@
+json.array! @trading_markets, partial: 'trading_markets/trading_market', as: :trading_market

@@ -8,18 +8,18 @@ class PricesController < ApplicationController
     def index
         @prices = Price.where(name:'蘿蔔(元/公斤)')
       #  p '---start---'
-      #  url = 'http://data.coa.gov.tw/Service/OpenData/DataFileService.aspx?UnitId=652'
-      #  response = RestClient.get(url)
-      #  price_data = JSON.parse(response)
+        url = 'http://data.coa.gov.tw/Service/OpenData/DataFileService.aspx?UnitId=652'
+        response = RestClient.get(url)
+        price_data = JSON.parse(response)
         # 以下為Json格式
-      #   p JSON.parse(response)
+        # p JSON.parse(response)
         # p price_data["作物"]
-
-      #  price_data.each do |u|
-      #      Price.create(name: u["作物"], year: u["年份"],
-      #      jan: u["1月價格"], feb: u["2月價格"], mar: u["3月價格"],:apr => u["4月價格"], may: u["5月價格"],:jun => u["6月價格"],
-      #      jul: u["7月價格"], aug: u["8月價格"], sep: u["9月價格"],:ort => u["10月價格"], nov: u["11月價格"],:dec => u["12月價格"])
-      #  end
+        Price.destroy_all
+        price_data.each do |u|
+            Price.create(name: u["作物"], year: u["年份"],
+            jan: u["1月價格"], feb: u["2月價格"], mar: u["3月價格"],:apr => u["4月價格"], may: u["5月價格"],:jun => u["6月價格"],
+            jul: u["7月價格"], aug: u["8月價格"], sep: u["9月價格"],:ort => u["10月價格"], nov: u["11月價格"],:dec => u["12月價格"])
+        end
 
         #p price_data[0]
         #p price_data[11]["5月價格"]

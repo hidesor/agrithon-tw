@@ -1,0 +1,1 @@
+json.partial! "trading_markets/trading_market", trading_market: @trading_market
