@@ -7,20 +7,20 @@ class TradingMarketsController < ApplicationController
     # GET /trading_markets.json
     def index
         @trading_markets = TradingMarket.all.order(:crop_number)
-        url = 'http://m.coa.gov.tw/OpenData/FarmTransData.aspx'
-        response = RestClient.get(url)
-        trading_markets = JSON.parse(response)
+  #      url = 'http://m.coa.gov.tw/OpenData/FarmTransData.aspx'
+  #      response = RestClient.get(url)
+  #      trading_markets = JSON.parse(response)
         # 以下為Json格式
         # p JSON.parse(response)
         # p price_data["作物"]
-        TradingMarket.destroy_all
-        trading_markets.each do |u|
-            TradingMarket.create(trading_date: u["交易日期"],
-             crop_number: u["作物代號"],crop_name: u["作物名稱"],
-             market_name: u["市場代號"],market_number: u["市場名稱"],
-             on_price: u["上價"],the_price: u["中價"],by_price: u["下價"],
-             avg_price: u["平均價"],tranding_price: u["交易量"])
-        end
+  #      TradingMarket.destroy_all
+  #      trading_markets.each do |u|
+  #          TradingMarket.create(trading_date: u["交易日期"],
+  #           crop_number: u["作物代號"],crop_name: u["作物名稱"],
+  #           market_name: u["市場代號"],market_number: u["市場名稱"],
+  #           on_price: u["上價"],the_price: u["中價"],by_price: u["下價"],
+  #           avg_price: u["平均價"],tranding_price: u["交易量"])
+  #      end
     end
 
     # GET /trading_markets/1
