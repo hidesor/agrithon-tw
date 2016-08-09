@@ -19,7 +19,7 @@ class PricesController < ApplicationController
       #      Price.create(name: u["作物"], year: u["年份"],
       #      jan: u["1月價格"], feb: u["2月價格"], mar: u["3月價格"],:apr => u["4月價格"], may: u["5月價格"],:jun => u["6月價格"],
       #      jul: u["7月價格"], aug: u["8月價格"], sep: u["9月價格"],:ort => u["10月價格"], nov: u["11月價格"],:dec => u["12月價格"])
-        end
+      #  end
 
         #p price_data[0]
         #p price_data[11]["5月價格"]
