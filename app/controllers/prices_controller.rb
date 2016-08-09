@@ -6,7 +6,8 @@ class PricesController < ApplicationController
     # GET /prices
     # GET /prices.json
     def index
-        @prices = Price.where(name:'蘿蔔(元/公斤)')
+      # @prices = Price.where(name:['木瓜(元/公斤)','蘿蔔(元/公斤)','香菇(太空包)乾(元/公斤)']).order(:name)
+      @prices = Price.order(:name)
       #  p '---start---'
       #  url = 'http://data.coa.gov.tw/Service/OpenData/DataFileService.aspx?UnitId=652'
       #  response = RestClient.get(url)
