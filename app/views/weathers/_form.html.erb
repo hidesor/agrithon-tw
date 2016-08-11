@@ -16,20 +16,8 @@
     <%= f.text_field :name_a %>
   </div>
   <div class="field">
-    <%= f.label :name_b %><br>
-    <%= f.text_field :name_b %>
-  </div>
-  <div class="field">
-    <%= f.label :name_c %><br>
-    <%= f.text_field :name_c %>
-  </div>
-  <div class="field">
-    <%= f.label :name_d %><br>
-    <%= f.text_field :name_d %>
-  </div>
-  <div class="field">
-    <%= f.label :name_e %><br>
-    <%= f.text_field :name_e %>
+    <%= f.label :date_a %><br>
+    <%= f.date_field :date_a, :value => Time.now.strftime('%Y-%m-%d') %>
   </div>
   <div class="field">
     <%= f.label :num_a %><br>
@@ -47,22 +35,7 @@
     <%= f.label :num_d %><br>
     <%= f.text_field :num_d %>
   </div>
-  <div class="field">
-    <%= f.label :num_e %><br>
-    <%= f.text_field :num_e %>
-  </div>
-  <div class="field">
-    <%= f.label :num_f %><br>
-    <%= f.text_field :num_f %>
-  </div>
-  <div class="field">
-    <%= f.label :num_g %><br>
-    <%= f.text_field :num_g %>
-  </div>
-  <div class="field">
-    <%= f.label :num_h %><br>
-    <%= f.text_field :num_h %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
