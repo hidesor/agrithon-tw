@@ -69,6 +69,6 @@ class WeathersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def weather_params
-      params.require(:weather).permit(:name_a, :name_b, :name_c, :name_d, :name_e, :num_a, :num_b, :num_c, :num_d, :num_e, :flont, :num_f, :num_g, :num_h)
+      params.require(:weather).permit(:name_a, :name_b, :name_c, :name_d, :name_e, :num_a, :num_b, :num_c, :num_d, :num_e, :flont, :num_f, :num_g, :num_h,:date_a)
     end
 end

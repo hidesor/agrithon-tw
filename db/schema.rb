@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160811154747) do
+ActiveRecord::Schema.define(version: 20160811163554) do
 
   create_table "prices", force: :cascade do |t|
     t.string   "name"
@@ -64,6 +64,12 @@ ActiveRecord::Schema.define(version: 20160811154747) do
     t.integer  "data_g"
     t.integer  "data_h"
     t.integer  "data_i"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "weather_tests", force: :cascade do |t|
+    t.date     "date_a"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

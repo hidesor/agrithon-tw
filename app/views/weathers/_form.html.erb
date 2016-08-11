@@ -17,7 +17,8 @@
   </div>
   <div class="field">
     <%= f.label :date_a %><br>
-    <%= f.date_field :date_a, :value => Time.now.strftime('%Y-%m-%d') %>
+  <!--  <!%= f.date_field :date_a, :value => Time.now.strftime('%Y-%m-%d') %> -->
+    <%= f.date_select :date_a %>
   </div>
   <div class="field">
     <%= f.label :num_a %><br>

@@ -1,0 +1,2 @@
+module WeatherTestsHelper
+end
