@@ -1,0 +1,69 @@
+<%= form_for(@weather) do |f| %>
+  <% if @weather.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weather.errors.count, "error") %> prohibited this weather from being saved:</h2>
+
+      <ul>
+      <% @weather.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_a %><br>
+    <%= f.text_field :name_a %>
+  </div>
+  <div class="field">
+    <%= f.label :name_b %><br>
+    <%= f.text_field :name_b %>
+  </div>
+  <div class="field">
+    <%= f.label :name_c %><br>
+    <%= f.text_field :name_c %>
+  </div>
+  <div class="field">
+    <%= f.label :name_d %><br>
+    <%= f.text_field :name_d %>
+  </div>
+  <div class="field">
+    <%= f.label :name_e %><br>
+    <%= f.text_field :name_e %>
+  </div>
+  <div class="field">
+    <%= f.label :num_a %><br>
+    <%= f.text_field :num_a %>
+  </div>
+  <div class="field">
+    <%= f.label :num_b %><br>
+    <%= f.text_field :num_b %>
+  </div>
+  <div class="field">
+    <%= f.label :num_c %><br>
+    <%= f.text_field :num_c %>
+  </div>
+  <div class="field">
+    <%= f.label :num_d %><br>
+    <%= f.text_field :num_d %>
+  </div>
+  <div class="field">
+    <%= f.label :num_e %><br>
+    <%= f.text_field :num_e %>
+  </div>
+  <div class="field">
+    <%= f.label :num_f %><br>
+    <%= f.text_field :num_f %>
+  </div>
+  <div class="field">
+    <%= f.label :num_g %><br>
+    <%= f.text_field :num_g %>
+  </div>
+  <div class="field">
+    <%= f.label :num_h %><br>
+    <%= f.text_field :num_h %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

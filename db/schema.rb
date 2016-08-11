@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160807144317) do
+ActiveRecord::Schema.define(version: 20160811144648) do
 
   create_table "prices", force: :cascade do |t|
     t.string   "name"
@@ -45,6 +45,45 @@ ActiveRecord::Schema.define(version: 20160807144317) do
     t.float    "by_price"
     t.float    "avg_price"
     t.float    "tranding_price"
+  end
+
+  create_table "weather_data", force: :cascade do |t|
+    t.date     "a_date"
+    t.date     "b_date"
+    t.date     "c_date"
+    t.string   "a_string"
+    t.string   "b_string"
+    t.string   "c_string"
+    t.string   "d_string"
+    t.integer  "data_a"
+    t.integer  "data_b"
+    t.integer  "data_c"
+    t.integer  "data_d"
+    t.integer  "data_e"
+    t.integer  "data_f"
+    t.integer  "data_g"
+    t.integer  "data_h"
+    t.integer  "data_i"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "weathers", force: :cascade do |t|
+    t.string   "name_a"
+    t.string   "name_b"
+    t.string   "name_c"
+    t.string   "name_d"
+    t.string   "name_e"
+    t.float    "num_a"
+    t.float    "num_b"
+    t.float    "num_c"
+    t.float    "num_d"
+    t.float    "num_e"
+    t.float    "num_f"
+    t.float    "num_g"
+    t.float    "num_h"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "welcomes", force: :cascade do |t|

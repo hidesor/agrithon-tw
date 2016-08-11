@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :weathers
+  resources :weather_data
   resources :welcomes
   resources :trading_markets
   resources :prices

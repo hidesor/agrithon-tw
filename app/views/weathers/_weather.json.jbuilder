@@ -1,0 +1,2 @@
+json.extract! weather, :id, :name_a, :name_b, :name_c, :name_d, :name_e, :num_a, :num_b, :num_c, :num_d, :num_e, :flont, :num_f, :num_g, :num_h, :created_at, :updated_at
+json.url weather_url(weather, format: :json)
