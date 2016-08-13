@@ -7,7 +7,7 @@ class TradingMarketsController < ApplicationController
     # GET /trading_markets.json
     def index
         @trading_markets = TradingMarket.all.order(:crop_number)
-        get_json
+        #get_json
     end
 
     def get_json
