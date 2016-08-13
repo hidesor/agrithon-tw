@@ -1,0 +1,2 @@
+module FarmCountsHelper
+end

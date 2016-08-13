@@ -1,0 +1,1 @@
+json.array! @farm_counts, partial: 'farm_counts/farm_count', as: :farm_count

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Farm Counts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @farm_counts.each do |farm_count| %>
+      <tr>
+        <td><%= link_to 'Show', farm_count %></td>
+        <td><%= link_to 'Edit', edit_farm_count_path(farm_count) %></td>
+        <td><%= link_to 'Destroy', farm_count, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Farm count', new_farm_count_path %>

@@ -1,0 +1,1 @@
+json.partial! "farm_counts/farm_count", farm_count: @farm_count
