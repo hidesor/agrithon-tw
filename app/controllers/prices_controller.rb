@@ -8,7 +8,7 @@ class PricesController < ApplicationController
     def index
       # @prices = Price.where(name:['木瓜(元/公斤)','蘿蔔(元/公斤)','香菇(太空包)乾(元/公斤)']).order(:name)
       @prices = Price.order(:name)
-      # get_json
+      #get_json
     end
 
     def get_json

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  month: MyString
+  crop: MyString
+  variery: MyString
+  county: MyString
+  town: MyString
+
+two:
+  type: 
+  month: MyString
+  crop: MyString
+  variery: MyString
+  county: MyString
+  town: MyString

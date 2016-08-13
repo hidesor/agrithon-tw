@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :farm_products
   resources :weather_tests
   resources :weathers
   resources :weather_data

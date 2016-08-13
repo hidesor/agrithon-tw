@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160811163554) do
+ActiveRecord::Schema.define(version: 20160813034305) do
+
+  create_table "farm_products", force: :cascade do |t|
+    t.string   "month"
+    t.string   "crop"
+    t.string   "county"
+    t.string   "town"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "ptype"
+    t.string   "variety"
+  end
 
   create_table "prices", force: :cascade do |t|
     t.string   "name"

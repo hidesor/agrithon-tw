@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @farm_product.ptype %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @farm_product.month %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @farm_product.crop %>
+</p>
+
+<p>
+  <strong>Variery:</strong>
+  <%= @farm_product.variery %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @farm_product.county %>
+</p>
+
+<p>
+  <strong>Town:</strong>
+  <%= @farm_product.town %>
+</p>
+
+<%= link_to 'Edit', edit_farm_product_path(@farm_product) %> |
+<%= link_to 'Back', farm_products_path %>

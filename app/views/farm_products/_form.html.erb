@@ -1,0 +1,41 @@
+<%= form_for(@farm_product) do |f| %>
+  <% if @farm_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@farm_product.errors.count, "error") %> prohibited this farm_product from being saved:</h2>
+
+      <ul>
+      <% @farm_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ptype %><br>
+    <%= f.text_field :ptype %>
+  </div>
+  <div class="field">
+    <%= f.label :month %><br>
+    <%= f.text_field :month %>
+  </div>
+  <div class="field">
+    <%= f.label :crop %><br>
+    <%= f.text_field :crop %>
+  </div>
+  <div class="field">
+    <%= f.label :variery %><br>
+    <%= f.text_field :variery %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br>
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label :town %><br>
+    <%= f.text_field :town %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
