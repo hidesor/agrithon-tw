@@ -6,7 +6,7 @@ class FarmProductsController < ApplicationController
     # GET /farm_products.json
     def index
       # @prices = Price.where(name:['木瓜(元/公斤)','蘿蔔(元/公斤)','香菇(太空包)乾(元/公斤)']).order(:name)
-        @farm_products = FarmProduct.where(county:['台中市']).order(:ptype)
+        @farm_products = FarmProduct.where(county:['台中市']).order(:ptype,:month)
         # get_json
     end
 
