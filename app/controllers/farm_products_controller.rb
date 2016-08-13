@@ -7,7 +7,7 @@ class FarmProductsController < ApplicationController
     def index
       # @prices = Price.where(name:['木瓜(元/公斤)','蘿蔔(元/公斤)','香菇(太空包)乾(元/公斤)']).order(:name)
         @farm_products = FarmProduct.where(county:['台中市']).order(:ptype,:month)
-        # get_json
+        get_json
     end
 
     def get_json
@@ -18,7 +18,7 @@ class FarmProductsController < ApplicationController
         # 以下為Json格式
         # p JSON.parse(response)
         # p price_data["作物"]
-        FarmProduct.destroy_all
+        #FarmProduct.destroy_all
         price_data.each do |u|
           u["variety"].to_s
             FarmProduct.create(
